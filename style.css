@@ -1,0 +1,70 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #4a4a8e;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Conteúdo principal */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.introduction, .character-classes {
+    margin-bottom: 20px;
+}
+
+.introduction p {
+    font-size: 1.1rem;
+}
+
+/* Classes de personagens */
+.character-classes ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.character-classes li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #e1e8ff;
+    border-left: 5px solid #4a4a8e;
+    border-radius: 5px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4a4a8e;
+    color: #fff;
+}
