@@ -1,3 +1,5 @@
+// scripts.js
+
 document.addEventListener('DOMContentLoaded', () => {
     const lightModeBtn = document.getElementById('light-mode-btn');
     const darkModeBtn = document.getElementById('dark-mode-btn');
@@ -10,13 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
     lightModeBtn.addEventListener('click', () => {
         lightModeStyles.disabled = false;
         darkModeStyles.disabled = true;
-        localStorage.setItem('theme', 'light');
+        localStorage.setItem('theme', 'light'); // Salva o tema no localStorage
     });
 
     darkModeBtn.addEventListener('click', () => {
         lightModeStyles.disabled = true;
         darkModeStyles.disabled = false;
-        localStorage.setItem('theme', 'dark');
+        localStorage.setItem('theme', 'dark'); // Salva o tema no localStorage
     });
 
     systemModeBtn.addEventListener('click', () => {
@@ -28,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             lightModeStyles.disabled = false;
             darkModeStyles.disabled = true;
         }
-        localStorage.removeItem('theme');
+        localStorage.removeItem('theme'); // Remove o tema do localStorage para aplicar o padrão do sistema
     });
 
     // Aplicar tema salvo no localStorage
@@ -40,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lightModeStyles.disabled = false;
         darkModeStyles.disabled = true;
     } else {
-        systemModeBtn.click(); // Aplica o modo do sistema se não houver tema salvo
+        // Aplica o modo do sistema se não houver tema salvo
+        systemModeBtn.click();
     }
 });
