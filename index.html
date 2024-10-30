@@ -5,48 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project RPG - Dead Tree Scribes</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="light-mode.css" id="light-mode">
+    <link rel="stylesheet" href="dark-mode.css" id="dark-mode">
+    <script src="scripts.js" defer></script> <!-- Adiciona defer para que o script seja carregado após o HTML -->
 </head>
 <body>
     <header>
         <h1>Project RPG - Dead Tree Scribes</h1>
-        <p>Seu portal de introdução ao D&D 5ª Edição e ao mundo dos RPGs de mesa</p>
+        <p>Seu portal de introdução ao mundo dos RPGs de mesa</p>
+        <div class="theme-toggle">
+            <button id="light-mode-btn">Modo Claro</button>
+            <button id="dark-mode-btn">Modo Escuro</button>
+            <button id="system-mode-btn">Modo do Sistema</button>
+        </div>
     </header>
 
     <div class="nav-buttons">
-        <a href="home.html">Home</a>
-        <a href="sobre.html">Sobre a Comunidade</a>
+        <a href="index.html">Home</a>
         <a href="livros.html">Livros</a>
         <a href="regras.html">Regras</a>
         <a href="classes.html">Classes</a>
     </div>
-
+    
     <main>
-        <section class="introduction">
-            <h2>Introdução ao D&D 5ª Edição</h2>
-            <p>*Dungeons & Dragons* 5ª Edição (DnD5e) é um dos sistemas de RPG mais populares do mundo, onde jogadores exploram mundos de fantasia, enfrentam monstros e desenvolvem histórias épicas. Os jogadores criam personagens únicos, e o Mestre do Jogo conduz a aventura, criando desafios e narrativas para um mundo imersivo.</p>
-            <p>Em DnD5e, você pode ser um herói com habilidades especiais e tomar decisões que impactam o desenrolar da história. Deixe a criatividade fluir e mergulhe nessa jornada de fantasia e imaginação!</p>
-        </section>
-
-        <section class="character-classes">
-            <h2>Classes de Personagens</h2>
-            <p>Cada classe oferece um estilo de jogo único. Escolha a que mais se adequa ao seu estilo de aventura:</p>
-            <ul>
-                <li><strong>Guerreiro</strong> - Mestre das armas e do combate físico.</li>
-                <li><strong>Mago</strong> - Manipulador de poderosas magias arcanas.</li>
-                <li><strong>Ladino</strong> - Ágil e furtivo, ideal para ataques surpresa.</li>
-                <li><strong>Clérigo</strong> - Curandeiro com poderes divinos.</li>
-                <li><strong>Bardo</strong> - Inspirador, combina magia com habilidades musicais.</li>
-            </ul>
-        </section>
-
         <section class="introduction-mesa">
-            <h3>Introdução à nossa mesa</h3>
+            <h2>Introdução à nossa mesa</h2>
             <p>Olá amigos! Eu e meus amigos jogamos nesta mesa há mais de 3 anos e estamos animados em anunciar um projeto novo focado em ajudar novos jogadores.</p>
             <p>Nosso foco é sempre acolher e melhorar como narradores, então fico feliz em dizer que estamos dando um "olá, mundo" a todos que querem se juntar a nós!</p>
         </section>
 
         <section class="links">
-            <h3>Links das nossas mesas e grupos</h3>
+            <h2>Links das nossas mesas e grupos</h2>
             <p>Cada link refere-se a uma parte do grupo:</p>
             <ul>
                 <li><strong>WhatsApp:</strong> - <a href="https://chat.whatsapp.com/IFKBLu7XWe6EmB6PXMikxC" target="_blank">https://chat.whatsapp.com/IFKBLu7XWe6EmB6PXMikxC</a></li>
