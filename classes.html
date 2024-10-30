@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Project RPG - Dead Tree Scribes</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="light-mode.css" id="light-mode">
-        <link rel="stylesheet" href="dark-mode.css" id="dark-mode">
-        <script src="scripts.js" defer></script> <!-- Adiciona defer para que o script seja carregado após o HTML -->
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project RPG - Dead Tree Scribes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="light-mode.css" id="light-mode">
+    <link rel="stylesheet" href="dark-mode.css" id="dark-mode">
+    <script src="scripts.js" defer></script> 
+</head>
 <body>
     <header>
         <h1>Project RPG - Dead Tree Scribes</h1>
         <p>Seu portal de introdução ao mundo dos RPGs de mesa</p>
+        <div class="theme-toggle">
+            <button id="light-mode-btn">Modo Claro</button>
+            <button id="dark-mode-btn">Modo Escuro</button>
+            <button id="system-mode-btn">Modo do Sistema</button>
+        </div>
     </header>
 
     <div class="nav-buttons">
@@ -21,7 +26,7 @@
         <a href="regras.html">Regras</a>
         <a href="classes.html">Classes</a>
     </div>
-
+    
     <main>
         <section class="introduction">
             <h2>Introdução ao D&D 5ª Edição</h2>
