@@ -1,0 +1,96 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #f5f5f5; /* Texto claro */
+    background-color: #1e1e2e; /* Fundo escuro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #252540; /* Fundo escuro do cabeçalho */
+    color: #f5f5f5; /* Texto claro no cabeçalho */
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #9b59b6; /* roxo */
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #d1d1e0; /* Texto claro */
+}
+
+/* Botões */
+.nav-buttons a {
+    background-color: #9b59b6; /* Cor dos botões */
+}
+
+.nav-buttons a:hover {
+    background-color: #8e44ad; 
+}
+
+/* Conteúdo principal */
+main {
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    background-color: #2b2b3c; /* Fundo escuro para o conteúdo */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Seções */
+h2, h3 {
+    color: #9b59b6;
+}
+
+/* Texto e parágrafos */
+.introduction p, .character-classes p, .introduction-mesa p, .introduction-ttrpg p, .links p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #f5f5f5; /* Texto claro */
+}
+
+/* Classes de personagens */
+.character-classes li {
+    background-color: #35354d; /* Fundo escuro para classes de personagens */
+    border-left: 5px solid #9b59b6;
+}
+
+.character-classes li:hover {
+    background-color: #41415a; /* Fundo escuro ao passar o mouse */
+}
+
+/* Links para grupos */
+.links a {
+    color: #9b59b6; /* Cor dos links */
+}
+
+.links a:hover {
+    color: #f5b7a4; /* Cor dos links ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+    background-color: #252540; /* Fundo escuro do rodapé */
+    color: #d1d1e0; /* Texto claro no rodapé */
+}

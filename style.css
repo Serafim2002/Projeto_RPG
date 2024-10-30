@@ -29,13 +29,42 @@ header {
 header h1 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #db7f67;
+    color: #9b59b6; /* roxo */
+    font-variant: small-caps;
+}
+
+header #cabecalho {
+    border-bottom: 0px;
+    font-variant: small-caps;
 }
 
 header p {
     font-size: 1.2rem;
     margin-top: 10px;
     color: #d1d1e0;
+}
+
+/* Botões */
+.nav-buttons {
+    margin: 20px 0;
+}
+
+.nav-buttons a {
+    display: inline-block;
+    background-color: #9b59b6;
+    color: #f5f5f5;
+    padding: 10px 20px;
+    margin: 5px;
+    font-variant: small-caps;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-buttons a:hover {
+    background-color: #8e44ad; 
+    transform: translateY(-2px);
 }
 
 /* Conteúdo principal */
@@ -50,22 +79,23 @@ main {
 }
 
 /* Seções */
-.introduction, .character-classes, .introduction-mesa, .links {
+.introduction, .character-classes, .introduction-mesa, .introduction-ttrpg, .links {
     margin-bottom: 20px;
 }
 
 h2, h3 {
-    color: #db7f67;
-    border-bottom: 2px solid #db7f67;
+    color: #9b59b6;
+    border-bottom: 2px solid #9b59b6;
     padding-bottom: 5px;
     margin-bottom: 15px;
 }
 
 /* Texto e parágrafos */
-.introduction p, .character-classes p, .introduction-mesa p, .links p {
+.introduction p, .character-classes p, .introduction-mesa p, .introduction-ttrpg p, .links p {
     font-size: 1.1rem;
     margin-bottom: 15px;
     color: #f5f5f5;
+    text-align: justify;
 }
 
 /* Classes de personagens */
@@ -78,7 +108,7 @@ h2, h3 {
     margin: 10px 0;
     padding: 10px;
     background-color: #35354d;
-    border-left: 5px solid #db7f67;
+    border-left: 5px solid #9b59b6;
     border-radius: 5px;
     transition: transform 0.2s ease;
 }
@@ -99,7 +129,7 @@ h2, h3 {
 }
 
 .links a {
-    color: #db7f67;
+    color: #9b59b6;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.2s;
@@ -125,4 +155,25 @@ footer {
 /* Efeitos adicionais */
 header, footer {
     font-family: 'Georgia', serif;
+}
+
+/* Botões de troca de tema */
+.theme-toggle {
+    position: fixed; /* Mantém o botão fixo na tela */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+    z-index: 1000; /* Certifique-se de que o botão fique acima de outros elementos */
+}
+
+.theme-toggle button {
+    background: transparent; /* Fundo transparente para o botão */
+    border: none; /* Remove bordas padrão */
+    font-size: 1.5rem; /* Tamanho do ícone */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    color: #9b59b6; /* Cor do ícone, se desejar */
+    transition: transform 0.2s; /* Efeito de transição suave ao passar o mouse */
+}
+
+.theme-toggle button:hover {
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
 }
