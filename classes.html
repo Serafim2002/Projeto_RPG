@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project RPG - Dead Tree Scribes</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="light-mode.css" id="light-mode">
-    <link rel="stylesheet" href="dark-mode.css" id="dark-mode">
-    <script src="scripts.js" defer></script> 
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/popUp.css">
+    <link rel="stylesheet" href="./CSS/Themes/light-mode.css" id="light-mode">
+    <link rel="stylesheet" href="./CSS/Themes/dark-mode.css" id="dark-mode">
+    <script src="./JavaScript/themeToggle.js" defer></script>
+    <script src="./JavaScript/popUp.js" defer></script>
 </head>
 <body>
     <header>
@@ -41,20 +43,69 @@
         <section class="character-classes">
             <h2>Classes de Personagens</h2>
             <p>Cada classe oferece um estilo de jogo único. Escolha a que mais se adequa ao seu estilo de aventura:</p>
-            <ul>
-                <li><strong>Artífice</strong> - Inventor que combina magia e tecnologia para criar engenhocas magicas.</li>
-                <li><strong>Bárbaro</strong> - Guerreiro feroz que canaliza sua raiva em poder de combate e resistência.</li>
-                <li><strong>Bardo</strong> - Músico e contador de histórias que usa magia e habilidades sociais para inspirar e enganar.</li>
-                <li><strong>Bruxo</strong> - Conjurador que obtém poderes mágicos através de um pacto com uma entidade sobrenatural, utilizando feitiços e habilidades únicas.</li>
-                <li><strong>Clérigo</strong> - Devoto de uma divindade que utiliza magia divina para curar, proteger e combater o mal.</li>
-                <li><strong>Druida</strong> - Guardião da natureza que pode se transformar em animais e conjurar feitiços relacionados à terra.</li>
-                <li><strong>Feiticeiro</strong> - Conjurador que utiliza a magia inata e poderosa de sua linhagem ou experiências pessoais.</li>
-                <li><strong>Guerreiro</strong> - Lutador versátil e habilidoso em combate corpo a corpo e com armas, podendo se especializar em diversas táticas.</li>
-                <li><strong>Ladino</strong> - Mestre do furtos e truques que utiliza astúcia e habilidades para se infiltrar, desarmar armadilhas e atacar de surpresa.</li>
-                <li><strong>Mago</strong> - Estudioso da magia que lança feitiços variados usando grimórios e a inteligência como base.</li>
-                <li><strong>Paladino</strong> - Guerreiro sagrado que combate o mal com a força e a fé, usando magia divina para proteger e curar.</li>
-                <li><strong>Patrulheiro</strong> - Caçador e aventureiro ágil que utiliza habilidades de sobrevivência e combate à distância para explorar e se adaptar a diferentes ambientes.</li>
-            </ul>
+            <div class="item-grid">
+                <!-- Cada item na grade -->
+                <div class="grid-item" onclick="openPopup('artificer')">
+                    <span class="icon">⚙️</span>
+                    <p>Artífice</p>
+                </div>
+                <div class="grid-item" onclick="openPopup('barbarian')">
+                    <span class="icon">🪓</span>
+                    <p>Bárbaro</p>
+                </div>
+                <div class="grid-item" onclick="openPopup('bard')">
+                    <span class="icon">🎵</span>
+                    <p>Bardo</p>
+                </div>
+                <div class="grid-item" onclick="openPopup('warlock')">
+                    <span class="icon">🕯️</span>
+                    <p>Bruxo</p>
+                </div>
+                <div class="grid-item" onclick="openPopup('cleric')">
+                    <span class="icon">✨</span>
+                    <p>Clérigo</p>
+                </div>
+                <div class="grid-item" onclick="openPopup('druid')">
+                    <span class="icon">🌿</span>
+                    <p>Druida</p>
+                </div>
+                <div class="grid-item" onclick="openPopup('sorcerer')">
+                    <span class="icon">🔥</span>
+                    <p>Feiticeiro</p>
+                </div>
+                <div class="grid-item" onclick="openPopup('fighter')">
+                    <span class="icon">⚔️</span>
+                    <p>Guerreiro</p>
+                </div>
+                <div class="grid-item" onclick="openPopup('rogue')">
+                    <span class="icon">🗡️</span>
+                    <p>Ladino</p>
+                </div>
+                <div class="grid-item" onclick="openPopup('mage')">
+                    <span class="icon">📜</span>
+                    <p>Mago</p>
+                </div>
+                <div class="grid-item" onclick="openPopup('monk')">
+                    <span class="icon">🧘‍♂️</span>
+                    <p>Monge</p>
+                </div>
+                <div class="grid-item" onclick="openPopup('paladin')">
+                    <span class="icon">🛡️</span>
+                    <p>Paladino</p>
+                </div>
+                <div class="grid-item" onclick="openPopup('ranger')">
+                    <span class="icon">🏹</span>
+                    <p>Patrulheiro</p>
+                </div>
+            </div>
+            
+            <div id="popup" class="popup-overlay">
+                <div class="popup-content">
+                    <span class="close-btn" onclick="closePopup()">&times;</span>
+                    <h2 id="popup-title">Título do Item</h2>
+                    <p id="popup-description">Descrição detalhada sobre o item selecionado.</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>

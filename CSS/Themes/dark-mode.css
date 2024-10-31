@@ -58,13 +58,24 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Janela Pop-Up */
+.popup-content {
+    background-color: #35354d;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+
 /* Seções */
 h2, h3 {
     color: #9b59b6;
 }
 
 /* Texto e parágrafos */
-.introduction p, .character-classes p, .introduction-mesa p, .introduction-ttrpg p, .links p {
+.introduction p, .character-classes p, .introduction-mesa p, .introduction-ttrpg p, .links p, .grid-item p, .popup-overlay, .popup-content p, .close-btn {
     font-size: 1.1rem;
     margin-bottom: 15px;
     color: #f5f5f5; /* Texto claro */
