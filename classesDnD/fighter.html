@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guerreiro - D&D 5e</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/popUp.css">
+    <link rel="stylesheet" href="../CSS/Themes/light-mode.css" id="light-mode">
+    <link rel="stylesheet" href="../CSS/Themes/dark-mode.css" id="dark-mode">
+    <script src="../JavaScript/themeToggle.js" defer></script>
+</head>
+<body>
+    
+    <header>
+        <h1>Guerreiro</h1>
+    </header>
+    
+    <div class="container">
+        <div class="card">
+            <div class="accordion-title" onclick="toggleAccordion(this)"><h3>Visão Geral</h3></div>
+            <div class="accordion-content">
+                <p>Os guerreiros são uma das classes mais diversas do universo de Dungeons & Dragons, representados por personagens como humanos, elfos e anões que lutam contra inimigos como goblins e ogros. Eles são habilidosos em manusear uma variedade de armas e armaduras, com conhecimento abrangente de combate e especializações em diferentes estilos, como arquearia ou luta com duas armas.</p>
+                <p>Embora nem todos os soldados sejam guerreiros, muitos têm treinamento militar, tornando-se guerreiros experientes em suas missões. Aventureiros guerreiros utilizam suas habilidades em explorações e batalhas contra monstros, buscando recompensas em suas jornadas, como armas mágicas. A combinação de versatilidade e especialização faz dos guerreiros combatentes formidáveis nos campos de batalha.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="accordion-title" onclick="toggleAccordion(this)"><h3>Construindo um Guerreiro</h3></div>
+            <div class="accordion-content">
+                <p>Conforme você constrói o seu guerreiro, é importante pensar em dois elementos relativos à história do seu personagem: onde você conseguiu seu treinamento em combate e o que o diferencia dos outros guerreiros ao seu redor? Você era de alguma forma cruel? Conseguiu uma ajuda extra de um mentor, talvez por sua excepcional dedicação? O que o trouxe para esse tipo de treinamento em primeiro lugar? Uma ameaça à sua terra natal, sede de vingança, uma necessidade de provar a si mesmo, podem ser todos esses motivos.</p>
+                <p>Você pode ter aproveitado um treinamento formal no exército real ou em uma milícia local. Talvez você tenha treinado na academia de guerra, aprendendo estratégias, táticas e história militar. Ou ainda pode ter sido um autodidata – rude, mas bem testado. Você escolheu o caminho da espada como uma fuga da vida na fazenda ou para seguir uma orgulhosa tradição familiar? Onde obteve suas armas e armaduras? Elas podem ser de uso militar ou uma herança de família, talvez você economizou por muitos anos para comprá-las. Seus armamentos são agora suas posses mais importantes – as únicas coisas que estão entre você e o abraço da morte.</p>
+                <div class="accordion-title" onclick="toggleAccordion(this)"><h4>Construção Rápida</h4></div>
+                <div class="accordion-content">
+                    <p>Você pode fazer um guerreiro rapidamente seguindo estas sugestões. Primeiro, coloque seu valor de habilidade mais alto em Força ou Destreza, a depender de se você quer se focar em armas corpo-a-corpo ou em arquearia (ou em armas ágeis). Seu próximo valor mais alto deveria ser em Constituição ou Inteligência, se você planeja adotar o arquétipo marcial Cavaleiro Arcano. Segundo, escolha o antecedente soldado.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="accordion-title" onclick="toggleAccordion(this)"><h3>Características de Classe</h3></div>
+            <div class="accordion-content">
+                <p>Como um guerreiro, você adquire as seguintes características de classe.</p>
+                <div class="accordion-title" onclick="toggleAccordion(this)"><h4>Pontos de Vida</h4></div>
+                <div class="accordion-content">
+                    <ul>
+                        <li><b>Dado de Vida: </b>1d10 por nível de guerreiro.</li><br>
+                        <li><b>Pontos de Vida no 1º Nível: </b>10 + seu modificador de Constituição.</li><br>
+                        <li><b>Pontos de Vida nos Níveis Seguintes: </b>1d10 (ou 6) + seu modificador de Constituição por nível de guerreiro após o 1º.</li><br>
+                    </ul>
+                </div>
+                <div class="accordion-title" onclick="toggleAccordion(this)"><h4>Proficiências</h4></div>
+                <div class="accordion-content">
+                    <ul>
+                        <li><b>Armaduras: </b>Todas as armaduras e Escudos.</li><br>
+                        <li><b>Armas: </b>Armas simples, armas marciais.</li><br>
+                        <li><b>Ferramentas: </b>Nenhum.</li><br><br>
+                        <li><b>Testes de Resistência: </b>Força, Constituição.</li><br>
+                        <li><b>Perícias: </b>Escolha duas dentre Acrobacia, Adestrar Animais, Atletismo, História, Intuição, Intimidação, Percepção e Sobrevivência.</li><br>
+                    </ul>
+                </div>
+                <div class="accordion-title" onclick="toggleAccordion(this)"><h4>Equipamento</h4></div>
+                <div class="accordion-content">
+                    <p>Você começa com o seguinte equipamento, além do equipamento concedido pelo seu antecedente:</p>
+                    <ul>
+                        <li>(a) Cota de Malha ou (b) Gibão de Peles, arco longo e 20 flechas</li><br>
+                        <li>(a) Uma arma marcial e um escudo ou (b) Duas armas marciais</li><br>
+                        <li>(a) Uma besta leve e 20 virotes ou (b) Dois machados de arremesso</li><br>
+                        <li>(a) Um pacote de aventureiro ou (b) Um pacote de explorador</li><br>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="accordion-title" onclick="toggleAccordion(this)"><h3>Habilidades de Classe</h3></div>
+            <div class="accordion-content">
+                <p>Ao adquirir niveis nessa classe, você ganha as seguintes habilidades:</p>
+                <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h4>Estilo de Luta</h4></div>
+                <div class="accordion-content">
+                    <p>Você adota um estilo de combate particular que será sua especialidade. Escolha uma das opções a seguir. Você não pode escolher o mesmo Estilo de Combate mais de uma vez, mesmo se puder escolher de novo.</p><br>
+                    <ul>
+                        <li>
+                            <b class="nomeHabilidade">Arquearia</b><br>Você ganha +2 de bônus nas jogadas de ataque realizadas com uma arma de ataque à distância.
+                        </li><br>
+                        <li>
+                            <b class="nomeHabilidade">Combate com Armas Grandes</b><br>Quando você rolar um 1 ou 2 num dado de dano de um ataque com arma corpo-a-corpo que você esteja empunhando com duas mãos, você pode rolar o dado novamente e usar a nova rolagem, mesmo que resulte em 1 ou 2. A arma deve ter a propriedade duas mãos ou versátil para ganhar esse benefício.
+                        </li><br>
+                        <li>
+                            <b class="nomeHabilidade">Combate com Duas Armas</b><br>Quando você estiver engajado em uma luta com duas armas, você pode adicionar o seu modificador de habilidade de dano na jogada de dano de seu segundo ataque.
+                        </li><br>
+                        <li>
+                            <b class="nomeHabilidade">Defesa</b><br>Enquanto estiver usando armadura, você ganha +1 de bônus em sua CA.
+                        </li><br>
+                        <li>
+                            <b class="nomeHabilidade">Duelismo</b><br>Quando você empunhar uma arma de ataque corpo-acorpo em uma mão e nenhuma outra arma, você ganha +2 de bônus nas jogadas de dano com essa arma.
+                        </li><br>
+                        <li>
+                            <b class="nomeHabilidade">Proteção</b><br>Quando uma criatura que você possa ver atacar um alvo que esteja a até 1,5 metro de você, você pode usar sua reação para impor desvantagem nas jogadas de ataque da criatura. Você deve estar empunhando um escudo.
+                        </li><br>
+                    </ul>
+                </div>
+                
+                <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h4>Retomar o Fôlego</h4></div>
+                <div class="accordion-content">
+                    <p>Você possui uma reserva de estamina e pode usá-la para proteger a si mesmo contra danos. No seu turno, você pode usar uma ação bônus para recuperar pontos de vida igual a 1d10 + seu nível de guerreiro.</p>
+                    <p>Uma vez que você use essa característica, você precisa terminar um descanso curto ou longo para usá-la de novo.</p>
+                </div>
+                
+                <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h4>Surto de Ação</h4></div>
+                <div class="accordion-content">
+                    <p>A partir do 2º nível, você pode forçar o seu limite para além do normal por um momento. Durante o seu turno, você pode realizar uma ação adicional juntamente com sua ação e possível ação bônus.</p>
+                    <p>Uma vez que você use essa característica, você precisa terminar um descanso curto ou longo para usá-la de novo. A partir do 17º nível, você pode usá-la duas vezes antes do descanso, porém somente uma vez por turno.</p>
+                </div>
+                
+                <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h4>Arquétipo Marcial</h4></div>
+                <div class="accordion-content">
+                    <p>No 3º nível, você escolhe um arquétipo o qual se esforçará para seguir as técnicas e estilos de combate dele. Escolha <b>Campeão</b>, <b>Cavaleiro Arcano</b> ou <b>Mestre de Batalha</b>, todos detalhados no final da descrição da classe. O arquétipo confere a você características especiais no 3º nível e de novo nos 7º, 10º, 15º e 18º nível.</p>
+                </div>
+                <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h4>Incremento no Valor de Habilidade</h4></div>
+                <div class="accordion-content">
+                    <p>Quando você atinge o 4° nível e novamente no 6°, 8°, 12°, 14°, 16° e 19° nível, você pode aumentar um valor de habilidade, à sua escolha, em 2 ou você pode aumentar dois valores de habilidade, à sua escolha, em 1. Como padrão, você não pode elevar um valor de habilidade acima de 20 com essa característica.</p>
+                </div>
+                <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h4>Ataque Extra</h4></div>
+                <div class="accordion-content">
+                    <p>A partir do 5º nível, você pode atacar duas vezes, ao invés de uma, quando usar a ação Atacar durante o seu turno.</p>
+                    <p>O número de ataques aumenta para três quando você alcançar o 11º nível de guerreiro e para 4 quando alcançar o 20º nível de guerreiro.</p>
+                </div>
+                <!-- <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h4>nomeHabilidade</h4></div>
+                <div class="accordion-content">
+                    <p></p>
+                </div> -->
+            </div>
+        </div>
+        
+        <script>
+            function toggleAccordion(element) {
+                const content = element.nextElementSibling;
+                content.style.display = content.style.display === "block" ? "none" : "block"; // Alterna entre abrir e fechar
+            }
+        </script>
+    </body>
+    </html>
+    

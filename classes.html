@@ -25,7 +25,7 @@
             </button>
         </div>
     </header>
-
+    
     <div class="nav-buttons">
         <a href="index.html">Home</a>
         <a href="livros.html">Livros</a>
@@ -39,7 +39,7 @@
             <p>Dungeons & Dragons 5ª Edição (D&D 5e) é um dos sistemas de RPG mais populares do mundo, onde jogadores exploram mundos de fantasia, enfrentam monstros e desenvolvem histórias épicas. Os jogadores criam personagens únicos, e o Mestre do Jogo conduz a aventura, criando desafios e narrativas para um mundo imersivo.</p>
             <p>Em D&D 5e, você pode ser um herói com habilidades especiais e tomar decisões que impactam o desenrolar da história. Deixe a criatividade fluir e mergulhe nessa jornada de fantasia e imaginação!</p>
         </section>
-
+        
         <section class="character-classes">
             <h2>Classes de Personagens</h2>
             <p>Cada classe oferece um estilo de jogo único. Escolha a que mais se adequa ao seu estilo de aventura:</p>
@@ -53,7 +53,7 @@
                     <span class="icon">🪓</span>
                     <p>Bárbaro</p>
                 </div>
-                <div class="grid-item" onclick="openPopup('bard')">
+                <div class="grid-item" onclick="openPopup('bard.html')">
                     <span class="icon">🎵</span>
                     <p>Bardo</p>
                 </div>
@@ -73,7 +73,7 @@
                     <span class="icon">🔥</span>
                     <p>Feiticeiro</p>
                 </div>
-                <div class="grid-item" onclick="openPopup('fighter')">
+                <div class="grid-item" onclick="openPopup('fighter.html')">
                     <span class="icon">⚔️</span>
                     <p>Guerreiro</p>
                 </div>
@@ -81,7 +81,7 @@
                     <span class="icon">🗡️</span>
                     <p>Ladino</p>
                 </div>
-                <div class="grid-item" onclick="openPopup('mage')">
+                <div class="grid-item" onclick="openPopup('mage.html')">
                     <span class="icon">📜</span>
                     <p>Mago</p>
                 </div>
@@ -99,11 +99,11 @@
                 </div>
             </div>
             
+            <!-- Pop-up que contém o iFrame -->
             <div id="popup" class="popup-overlay">
                 <div class="popup-content">
                     <span class="close-btn" onclick="closePopup()">&times;</span>
-                    <h2 id="popup-title">Título do Item</h2>
-                    <p id="popup-description">Descrição detalhada sobre o item selecionado.</p>
+                    <iframe id="popup-iframe" src="" frameborder="0"></iframe>
                 </div>
             </div>
         </section>
