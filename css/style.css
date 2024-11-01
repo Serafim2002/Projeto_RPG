@@ -29,7 +29,17 @@ header {
 header h1 {
     font-size: 2.5rem;
     font-weight: bold;
+<<<<<<< Updated upstream:css/style.css
     color: #9b59b6; /* roxo */
+=======
+    color: #9b59b6; 
+    font-variant: small-caps;
+}
+
+header #cabecalho {
+    border-bottom: 0px;
+    font-variant: small-caps;
+>>>>>>> Stashed changes:CSS/style.css
 }
 
 header p {
