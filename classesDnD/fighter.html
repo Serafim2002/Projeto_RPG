@@ -5,42 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guerreiro - D&D 5e</title>
     <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/popUp.css">
     <link rel="stylesheet" href="../CSS/Themes/light-mode.css" id="light-mode">
     <link rel="stylesheet" href="../CSS/Themes/dark-mode.css" id="dark-mode">
     <script src="../JavaScript/themeToggle.js" defer></script>
+    <script src="../JavaScript/classesPopUp.js" defer></script>
 </head>
 <body>
     
     <header>
         <h1>Guerreiro</h1>
+        <div class="theme-toggle">
+            <button id="light-mode-btn" title="Modo Claro">
+                ☀️ <!-- ícone de sol -->
+            </button>
+            <button id="dark-mode-btn" title="Modo Escuro" style="display: none;">
+                🌙 <!-- ícone de lua -->
+            </button>
+        </div>
     </header>
+    
+    <div class="nav-buttons">
+        <a href="#visao">Visão Geral</a>
+        <a href="#build">Construção</a>
+        <a href="#features">Características</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#archetypes">Arquétipos</a>
+    </div>
     
     <div class="container">
         <div class="card">
-            <div class="accordion-title" onclick="toggleAccordion(this)"><h3>Visão Geral</h3></div>
+            <div class="accordion-title" onclick="toggleAccordion(this)" id="visao"><h3>Visão Geral</h3></div>
             <div class="accordion-content">
-                <p>Os guerreiros são uma das classes mais diversas do universo de Dungeons & Dragons, representados por personagens como humanos, elfos e anões que lutam contra inimigos como goblins e ogros. Eles são habilidosos em manusear uma variedade de armas e armaduras, com conhecimento abrangente de combate e especializações em diferentes estilos, como arquearia ou luta com duas armas.</p>
-                <p>Embora nem todos os soldados sejam guerreiros, muitos têm treinamento militar, tornando-se guerreiros experientes em suas missões. Aventureiros guerreiros utilizam suas habilidades em explorações e batalhas contra monstros, buscando recompensas em suas jornadas, como armas mágicas. A combinação de versatilidade e especialização faz dos guerreiros combatentes formidáveis nos campos de batalha.</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Os guerreiros são uma das classes mais diversas do universo de Dungeons & Dragons, representados por personagens como humanos, elfos e anões que lutam contra inimigos como goblins e ogros. Eles são habilidosos em manusear uma variedade de armas e armaduras, com conhecimento abrangente de combate e especializações em diferentes estilos, como arquearia ou luta com duas armas.</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Embora nem todos os soldados sejam guerreiros, muitos têm treinamento militar, tornando-se guerreiros experientes em suas missões. Aventureiros guerreiros utilizam suas habilidades em explorações e batalhas contra monstros, buscando recompensas em suas jornadas, como armas mágicas. A combinação de versatilidade e especialização faz dos guerreiros combatentes formidáveis nos campos de batalha.</p>
             </div>
         </div>
         
         <div class="card">
-            <div class="accordion-title" onclick="toggleAccordion(this)"><h3>Construindo um Guerreiro</h3></div>
+            <div class="accordion-title" onclick="toggleAccordion(this)" id="build"><h3>Construindo um Guerreiro</h3></div>
             <div class="accordion-content">
-                <p>Conforme você constrói o seu guerreiro, é importante pensar em dois elementos relativos à história do seu personagem: onde você conseguiu seu treinamento em combate e o que o diferencia dos outros guerreiros ao seu redor? Você era de alguma forma cruel? Conseguiu uma ajuda extra de um mentor, talvez por sua excepcional dedicação? O que o trouxe para esse tipo de treinamento em primeiro lugar? Uma ameaça à sua terra natal, sede de vingança, uma necessidade de provar a si mesmo, podem ser todos esses motivos.</p>
-                <p>Você pode ter aproveitado um treinamento formal no exército real ou em uma milícia local. Talvez você tenha treinado na academia de guerra, aprendendo estratégias, táticas e história militar. Ou ainda pode ter sido um autodidata – rude, mas bem testado. Você escolheu o caminho da espada como uma fuga da vida na fazenda ou para seguir uma orgulhosa tradição familiar? Onde obteve suas armas e armaduras? Elas podem ser de uso militar ou uma herança de família, talvez você economizou por muitos anos para comprá-las. Seus armamentos são agora suas posses mais importantes – as únicas coisas que estão entre você e o abraço da morte.</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Conforme você constrói o seu guerreiro, é importante pensar em dois elementos relativos à história do seu personagem: onde você conseguiu seu treinamento em combate e o que o diferencia dos outros guerreiros ao seu redor? Você era de alguma forma cruel? Conseguiu uma ajuda extra de um mentor, talvez por sua excepcional dedicação? O que o trouxe para esse tipo de treinamento em primeiro lugar? Uma ameaça à sua terra natal, sede de vingança, uma necessidade de provar a si mesmo, podem ser todos esses motivos.</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Você pode ter aproveitado um treinamento formal no exército real ou em uma milícia local. Talvez você tenha treinado na academia de guerra, aprendendo estratégias, táticas e história militar. Ou ainda pode ter sido um autodidata – rude, mas bem testado. Você escolheu o caminho da espada como uma fuga da vida na fazenda ou para seguir uma orgulhosa tradição familiar? Onde obteve suas armas e armaduras? Elas podem ser de uso militar ou uma herança de família, talvez você economizou por muitos anos para comprá-las. Seus armamentos são agora suas posses mais importantes – as únicas coisas que estão entre você e o abraço da morte.</p>
                 <div class="accordion-title" onclick="toggleAccordion(this)"><h4>Construção Rápida</h4></div>
                 <div class="accordion-content">
-                    <p>Você pode fazer um guerreiro rapidamente seguindo estas sugestões. Primeiro, coloque seu valor de habilidade mais alto em Força ou Destreza, a depender de se você quer se focar em armas corpo-a-corpo ou em arquearia (ou em armas ágeis). Seu próximo valor mais alto deveria ser em Constituição ou Inteligência, se você planeja adotar o arquétipo marcial Cavaleiro Arcano. Segundo, escolha o antecedente soldado.</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Você pode fazer um guerreiro rapidamente seguindo estas sugestões. Primeiro, coloque seu valor de habilidade mais alto em Força ou Destreza, a depender de se você quer se focar em armas corpo-a-corpo ou em arquearia (ou em armas ágeis). Seu próximo valor mais alto deveria ser em Constituição ou Inteligência, se você planeja adotar o arquétipo marcial Cavaleiro Arcano. Segundo, escolha o antecedente soldado.</p>
                 </div>
             </div>
         </div>
         
         <div class="card">
-            <div class="accordion-title" onclick="toggleAccordion(this)"><h3>Características de Classe</h3></div>
+            <div class="accordion-title" onclick="toggleAccordion(this)" id="features"><h3>Características de Classe</h3></div>
             <div class="accordion-content">
-                <p>Como um guerreiro, você adquire as seguintes características de classe.</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Como um guerreiro, você adquire as seguintes características de classe.</p>
                 <div class="accordion-title" onclick="toggleAccordion(this)"><h4>Pontos de Vida</h4></div>
                 <div class="accordion-content">
                     <ul>
@@ -61,7 +77,7 @@
                 </div>
                 <div class="accordion-title" onclick="toggleAccordion(this)"><h4>Equipamento</h4></div>
                 <div class="accordion-content">
-                    <p>Você começa com o seguinte equipamento, além do equipamento concedido pelo seu antecedente:</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Você começa com o seguinte equipamento, além do equipamento concedido pelo seu antecedente:</p><br>
                     <ul>
                         <li>(a) Cota de Malha ou (b) Gibão de Peles, arco longo e 20 flechas</li><br>
                         <li>(a) Uma arma marcial e um escudo ou (b) Duas armas marciais</li><br>
@@ -73,12 +89,12 @@
         </div>
         
         <div class="card">
-            <div class="accordion-title" onclick="toggleAccordion(this)"><h3>Habilidades de Classe</h3></div>
+            <div class="accordion-title" onclick="toggleAccordion(this)" id="skills"><h3>Habilidades de Classe</h3></div>
             <div class="accordion-content">
-                <p>Ao adquirir niveis nessa classe, você ganha as seguintes habilidades:</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Ao adquirir niveis nessa classe, você ganha as seguintes habilidades:</p>
                 <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h4>Estilo de Luta</h4></div>
                 <div class="accordion-content">
-                    <p>Você adota um estilo de combate particular que será sua especialidade. Escolha uma das opções a seguir. Você não pode escolher o mesmo Estilo de Combate mais de uma vez, mesmo se puder escolher de novo.</p><br>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Você adota um estilo de combate particular que será sua especialidade. Escolha uma das opções a seguir. Você não pode escolher o mesmo Estilo de Combate mais de uma vez, mesmo se puder escolher de novo.</p><br>
                     <ul>
                         <li>
                             <b class="nomeHabilidade">Arquearia</b><br>Você ganha +2 de bônus nas jogadas de ataque realizadas com uma arma de ataque à distância.
@@ -103,40 +119,285 @@
                 
                 <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h4>Retomar o Fôlego</h4></div>
                 <div class="accordion-content">
-                    <p>Você possui uma reserva de estamina e pode usá-la para proteger a si mesmo contra danos. No seu turno, você pode usar uma ação bônus para recuperar pontos de vida igual a 1d10 + seu nível de guerreiro.</p>
-                    <p>Uma vez que você use essa característica, você precisa terminar um descanso curto ou longo para usá-la de novo.</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Você possui uma reserva de estamina e pode usá-la para proteger a si mesmo contra danos. No seu turno, você pode usar uma ação bônus para recuperar pontos de vida igual a 1d10 + seu nível de guerreiro.</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Uma vez que você use essa característica, você precisa terminar um descanso curto ou longo para usá-la de novo.</p>
                 </div>
                 
                 <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h4>Surto de Ação</h4></div>
                 <div class="accordion-content">
-                    <p>A partir do 2º nível, você pode forçar o seu limite para além do normal por um momento. Durante o seu turno, você pode realizar uma ação adicional juntamente com sua ação e possível ação bônus.</p>
-                    <p>Uma vez que você use essa característica, você precisa terminar um descanso curto ou longo para usá-la de novo. A partir do 17º nível, você pode usá-la duas vezes antes do descanso, porém somente uma vez por turno.</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;A partir do 2º nível, você pode forçar o seu limite para além do normal por um momento. Durante o seu turno, você pode realizar uma ação adicional juntamente com sua ação e possível ação bônus.</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Uma vez que você use essa característica, você precisa terminar um descanso curto ou longo para usá-la de novo. A partir do 17º nível, você pode usá-la duas vezes antes do descanso, porém somente uma vez por turno.</p>
                 </div>
                 
                 <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h4>Arquétipo Marcial</h4></div>
                 <div class="accordion-content">
-                    <p>No 3º nível, você escolhe um arquétipo o qual se esforçará para seguir as técnicas e estilos de combate dele. Escolha <b>Campeão</b>, <b>Cavaleiro Arcano</b> ou <b>Mestre de Batalha</b>, todos detalhados no final da descrição da classe. O arquétipo confere a você características especiais no 3º nível e de novo nos 7º, 10º, 15º e 18º nível.</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;No 3º nível, você escolhe um arquétipo o qual se esforçará para seguir as técnicas e estilos de combate dele. Escolha <b>Campeão</b>, <b>Cavaleiro Arcano</b> ou <b>Mestre de Batalha</b>, todos detalhados no final da descrição da classe. O arquétipo confere a você características especiais no 3º nível e de novo nos 7º, 10º, 15º e 18º nível.</p>
                 </div>
                 <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h4>Incremento no Valor de Habilidade</h4></div>
                 <div class="accordion-content">
-                    <p>Quando você atinge o 4° nível e novamente no 6°, 8°, 12°, 14°, 16° e 19° nível, você pode aumentar um valor de habilidade, à sua escolha, em 2 ou você pode aumentar dois valores de habilidade, à sua escolha, em 1. Como padrão, você não pode elevar um valor de habilidade acima de 20 com essa característica.</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Quando você atinge o 4° nível e novamente no 6°, 8°, 12°, 14°, 16° e 19° nível, você pode aumentar um valor de habilidade, à sua escolha, em 2 ou você pode aumentar dois valores de habilidade, à sua escolha, em 1. Como padrão, você não pode elevar um valor de habilidade acima de 20 com essa característica.</p>
                 </div>
                 <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h4>Ataque Extra</h4></div>
                 <div class="accordion-content">
-                    <p>A partir do 5º nível, você pode atacar duas vezes, ao invés de uma, quando usar a ação Atacar durante o seu turno.</p>
-                    <p>O número de ataques aumenta para três quando você alcançar o 11º nível de guerreiro e para 4 quando alcançar o 20º nível de guerreiro.</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;A partir do 5º nível, você pode atacar duas vezes, ao invés de uma, quando usar a ação Atacar durante o seu turno.</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;O número de ataques aumenta para três quando você alcançar o 11º nível de guerreiro e para 4 quando alcançar o 20º nível de guerreiro.</p>
                 </div>
-                <!-- <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h4>nomeHabilidade</h4></div>
+                <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h4>Indomável</h4></div>
                 <div class="accordion-content">
-                    <p></p>
-                </div> -->
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;A partir do 9º nível, você pode jogar de novo um teste de resistência que falhou. Se o fizer, você deve usar o novo valor e não pode usar essa característica de novo antes de terminar um descanso longo.</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Você pode usar esta característica duas vezes entre descansos longos quando chegar no 13º nível e três vezes entre descansos longos quando chegar no 17º nível.</p>
+                </div>
             </div>
         </div>
+        
+        <div class="card">
+            <div class="accordion-title" onclick="toggleAccordion(this)" id="archetypes"><h3>Arquétipos Marciais</h3></div>
+            <div class="accordion-content">
+                <div class="accordion-title" onclick="toggleAccordion(this)"><h4>Campeão</h4></div>
+                <div class="accordion-content">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;O arquétipo Campeão foca no desenvolvimento da pura força física acompanhada por uma perfeição mortal. Aqueles que trilham o caminho desse arquétipo combinam rigorosos treinamentos com excelência física para desferir golpes devastadores.</p>
+                    
+                    <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h5>Crítico Aprimorado</h5></div>
+                    <div class="accordion-content">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;A partir do 3º nível, seus ataques com armas adquirem uma margem de acerto crítico de 19 a 20 nas jogadas de ataque.</p>
+                    </div>
+                    
+                    <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h5>Atletismo Extraordinário</h5></div>
+                    <div class="accordion-content">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;A partir do 7º nível, você adiciona metade de seu bônus de proficiência (arredondado para cima) em qualquer teste de Força, Destreza ou Constituição que você já não aplique seu bônus de proficiência.</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;Além disso, quando você fizer um salto longo com corrida, o alcance em metros que poderá saltar aumenta em 0,3 vezes o seu modificador de Força.</p>
+                    </div>
+                    
+                    <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h5>Estilo de Luta Adicional</h5></div>
+                    <div class="accordion-content">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;No 10º nível, você pode escolher um segundo Estilo de Combate da sua característica de classe.</p>
+                    </div>
+                    
+                    <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h5>Crítico Superior</h5></div>
+                    <div class="accordion-content">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;A partir do 15º nível, seus ataques com armas adquirem uma margem de acerto crítico de 18 a 20 nas jogadas de ataque.</p>
+                    </div>
+                    
+                    <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h5>Sobrevivente</h5></div>
+                    <div class="accordion-content">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;No 18º nível, você alcança o topo da resiliência em batalha. No começo de cada um de seus turnos, você recupera uma quantidade de pontos de vida igual a 5 + seu modificador de Constituição se não estiver com mais que metade de seus pontos de vida. Você não recebe esse benefício se estiver com 0 pontos de vida.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-title" onclick="toggleAccordion(this)"><h4>Cavaleiro Arcano</h4></div>
+                <div class="accordion-content">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;O arquétipo de Cavaleiro Arcano combina a maestria marcial comum a todos os guerreiros, com um cuidadoso estudo de magia. Os cavaleiros arcanos usam técnicas mágicas similares as praticadas pelos magos. Eles focam seu estudo em duas das oito escolas: abjuração e evocação. As magia de abjuração concedem proteção adicional em batalha ao Cavaleiro Arcano, e as magias de evocação causam dano a vários oponentes de uma vez, estendendo o alcance do guerreiro em combate. Esses cavaleiros aprendem, comparativamente, um pequeno número de magias, guardando-as na memória ao invés de mantê-las em um grimório.</p>
+                    
+                    <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h5>Conjuração</h5></div>
+                    <div class="accordion-content">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;Quando você alcançar o 3° nível, você amplia o seu poderio marcial com a habilidade de conjurar magias. Veja o capítulo 10 para as regras gerais de conjuração e o capítulo 11 para a lista de magias de mago.</p>
+                        <ul>
+                            <li>
+                                <b class="nomeHabilidade">Truques</b><br>&nbsp;&nbsp;&nbsp;&nbsp;Você aprende dois truques, à sua escolha, da lista de magias de mago. Você aprende um truque de mago adicional, à sua escolha, no 10° nível.
+                            </li>
+                            <li>
+                                <b class="nomeHabilidade">Espaços de Magia</b><br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;A <b onmouseover="openPopup(event, 'cavaleiroArcano.png')" onmouseout="closePopup()">tabela</b> Conjuração de Cavaleiro Arcano mostra quantos espaços de magia de 1° nível e superiores você possui disponíveis para conjuração. Para conjurar uma dessas magias, você deve gastar uma espaço de magia do nível da magia ou superior. Você recobra todos os espaços de magia gastos quando você completa um descanso longo.<br>&nbsp;&nbsp;&nbsp;&nbsp;Por exemplo, se você quiser conjurar a magia de 1° nível escudo arcano e você tiver um espaço de magia de 1° nível e um de 2° nível disponíveis, você poderá conjurar escudo arcano usando qualquer dos dois espaços.
+                            </li>
+                            <li>
+                                <b class="nomeHabilidade">Magias Conhecidas de 1º Nível e Superiores</b><br>&nbsp;&nbsp;&nbsp;&nbsp;Você conhece três magias de 1° nível, à sua escolha, as quais duas delas você deve escolher das magias de abjuração e evocação da lista de magias de mago.<br>&nbsp;&nbsp;&nbsp;&nbsp;A coluna Magias Conhecidas na tabela Conjuração do Cavaleiro Arcano mostra quando você aprende mais magias de mago, de 1° nível ou superior. Cada uma dessas magias deve ser uma magia de abjuração ou evocação, à sua escolha, de um nível a que você tenha acesso, como mostrado na tabela. Por exemplo, quando você alcança o 7° nível da classe, você pode aprender uma nova magia de 1° ou 2° nível.<br>&nbsp;&nbsp;&nbsp;&nbsp;As magias que você aprende no 8°, 14° e 20° nível podem vir de qualquer escola de magia.<br>&nbsp;&nbsp;&nbsp;&nbsp;Além disso, quando você adquire um nível nessa classe, você pode escolher uma magia de mago que você conheça e substituí-la por outra magia da lista de magias de mago, que também deve ser de um nível ao qual você tenha espaços de magia e deve ser uma magia de abjuração ou evocação, exceto as magias substituídas no 8°, 14° e 20º nível.
+                            </li>
+                            <li>
+                                <b class="nomeHabilidade">Habilidade de Conjuração</b><br>&nbsp;&nbsp;&nbsp;&nbsp;Sua habilidade de conjuração é Inteligência para suas magias de mago, portanto, você usa sua Inteligência sempre que alguma magia se referir à sua habilidade de conjurar magias. Além disso, você usa o seu modificador de Inteligência para definir a CD dos testes de resistência para as magias de mago que você conjura e quando você realiza uma jogada de ataque com uma magia.
+                                <li>
+                                    <b class="nomeHabilidade">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CD para suas magias</b> = 8 + bônus de proficiência + seu modificador de Inteligência
+                                </li>
+                                <li>
+                                    <b class="nomeHabilidade">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Modificador de Ataque de Magia</b> = seu bônus de proficiência + seu modificador de Inteligência
+                                </li>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h5>Vínculo com Arma</h5></div>
+                    <div class="accordion-content">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;No 3° nível, você aprende um ritual que cria um vínculo mágico entre você e uma arma. Você realiza esse ritual no curso de 1 hora, que pode ser realizada durante um descanso curto. A arma deve estar ao seu alcance ao decorrer do ritual, ao concluí-lo, você toca a arma e forja o elo.</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;Uma vez que você tenha vinculado uma arma a você, você não pode ser desarmado dessa arma, a menos que você esteja incapacitado. Se ela estiver no mesmo plano de existência, você pode invocar essa arma com uma ação bônus, no seu turno, fazendo-a se teletransportar instantaneamente para a sua mão.</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;Você pode ter até duas armas vinculadas, mas só pode invocar uma por vez com sua ação bônus. Se você quiser criar um elo com uma terceira arma, você deve quebrar o vínculo com um das outras duas.</p>
+                    </div>
+                    
+                    <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h5>Magia de Guerra</h5></div>
+                    <div class="accordion-content">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;A partir do 7° nível, quando você usar sua ação para conjurar um truque, você pode realizar um ataque com arma, com uma ação bônus.</p>
+                    </div>
+                    
+                    <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h5>Golpe Místico</h5></div>
+                    <div class="accordion-content">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;No 10° nível, você aprende como fazer com que os seus golpes com arma penetrem a resistência de uma criatura às suas magias. Quando você atingir uma criatura com um ataque com arma, aquela criatura terá desvantagem no próximo teste de resistência que ela fizer contra uma magia que você conjurar antes do final do seu próximo turno.</p>
+                    </div>
+                    
+                    <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h5>Investida Arcana</h5></div>
+                    <div class="accordion-content">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;No 15° nível, você ganha a capacidade de se teletransportar até 9 metros para um espaço desocupado que você possa ver, quando você usar seu Surto de Ação. Você pode se teletransportar antes ou depois da ação adicional.</p>
+                    </div>
+                    
+                    <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h5>Magia de Guerra Aprimorada</h5></div>
+                    <div class="accordion-content">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;A partir do 18° nível, quando você usar sua ação para conjurar uma magia, você pode realizar um ataque com arma, com uma ação bônus.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-title" onclick="toggleAccordion(this)"><h4>Mestre de Batalha</h4></div>
+                <div class="accordion-content">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Aqueles que emulam o arquétipo de Mestre de Batalha empregam técnicas marciais passadas de geração em geração. Para um Mestre de Batalha, o combate é um campo acadêmico, as vezes, incluindo assuntos além da batalha, como forjaria e caligrafia. Nem todo guerreiro absorve as lições de história, teoria e arte que são refletidas no arquétipo de Mestre de Batalha, mas aqueles que conseguem, tornam-se guerreiros bem-supridos de grande perícia e conhecimento.</p>
+                    
+                    <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h5>Superioridade em Combate</h5></div>
+                    <div class="accordion-content">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;Quando você escolhe esse arquétipo, no 3° nível, você aprende manobras que são abastecidas com dados especiais chamados dados de superioridade.</p>
+                        <ul>
+                            <li>
+                                <b class="nomeHabilidade">Manobras</b>
+                                <p>&nbsp;&nbsp;Você aprende três manobras, à sua escolha, que são detalhadas em “Manobras”, a seguir. Muitas manobras aprimoram um ataque de várias formas. Você só pode usar uma manobra por ataque.</p>
+                                <p>&nbsp;&nbsp;Você aprende duas manobras adicionais, à sua escolha, no 7°, 10° e 15° nível. A cada vez que você aprende uma nova manobra, você pode substituir uma manobra conhecida por uma diferente.</p>
+                            </li>
+                            
+                            <li>
+                                <b class="nomeHabilidade">Dados de Superioridade</b>
+                                <p>&nbsp;&nbsp;Você tem quatro dados de superioridade, que são d8s. Um dado de superioridade é gasto quando você usa-o. Você recupera todos os dados de superioridade gastos quando terminar um descanso curto ou longo.</p>
+                                <p>&nbsp;&nbsp;Você adquire outro dado de superioridade no 7° nível e mais um no 15° nível.</p>
+                                <p>&nbsp;&nbsp;Teste de Resistência. Algumas das suas manobras exigem que o alvo realize um teste de resistência contra o efeito da manobra. A CD do teste de resistência é calculada a seguir:</p>
+                                
+                                <li>
+                                    <br><b class="nomeHabilidade">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CD para suas manobras</b> = 8 + bônus de proficiência + seu modificador de Força ou Destreza (à sua escolha)
+                                </li>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h5>Estudioso da Guerra</h5></div>
+                    <div class="accordion-content">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;No 3° nível, você ganha proficiência com um tipo de ferramenta de artesão, à sua escolha.</p>
+                    </div>
+                    
+                    <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h5>Conheça seu Inimigo</h5></div>
+                    <div class="accordion-content">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;A partir do 7° nível, se você gastar, pelo menos, 1 minuto observando ou interagindo com outra criatura fora de combate, você pode aprender certas informações sobre as capacidades dela comparadas as suas. O Mestre conta a você se a criatura é igual, superior ou inferior a você a respeito de duas das seguintes características, à sua escolha:</p>
+                        <br><ol>
+                            <li>Valor de Força</li>
+                            <li>Valor de Destreza</li>
+                            <li>Valor de Constituição</li>
+                            <li>Classe de Armadura</li>
+                            <li>Pontos de Vida atuais</li>
+                            <li>Nível total de classe (se possuir)</li>
+                            <li>Níveis da classe de Guerreiro (se possuir)</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h5>Superioridade em Combate Aprimorada</h5></div>
+                    <div class="accordion-content">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;No 10° nível, seus dados de superioridade se tornam d10s e posteriormente no 18° nível, eles se tornam d12s.</p>
+                    </div>
+                    
+                    <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h5>Implacável</h5></div>
+                    <div class="accordion-content">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;No 15° nível, quando você rolar iniciativa e não tiver nenhum dado de superioridade restante, você recupera um dado de superioridade.</p>
+                    </div>
+                    
+                    <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h5>Manobras</h5></div>
+                    <div class="accordion-content">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;As manobras são apresentadas em ordem alfabética.</p>
+                        
+                        <ul>
+                            <li>
+                                <b class="nomeHabilidade">Aparar</b>
+                                <p>Quando outra criatura causar dano a você com um ataque corpo-a-corpo, você pode usar sua reação e gastar um dado de superioridade para reduzir o dano pelo número rolado no dado de superioridade + seu modificador de Destreza</p><br>
+                            </li>
+                            
+                            <li>
+                                <b class="nomeHabilidade">Ataque Ameaçador</b>
+                                <p>Quando você atingir uma criatura com um ataque com arma, você pode gastar um dado de superioridade para tentar amedrontar o alvo. Você adiciona seu dado de superioridade a jogada de dano do ataque e o alvo deve realizar um teste de resistência de Sabedoria. Se falhar, ele ficará com medo de você até o final do seu próximo turno</p><br>
+                            </li>
+                            
+                            <li>
+                                <b class="nomeHabilidade">Ataque de Encontrão</b>
+                                <p>Quando você atingir uma criatura com um ataque com arma, você pode gastar um dado de superioridade para tentar empurrar o alvo para trás. Você adiciona seu dado de superioridade a jogada de dano do ataque e, se o alvo for Grande ou menor, ele deve realizar um teste de resistência de Força. Se falhar, você empurra o alvo para até 4,5 metros de você.</p><br>
+                            </li>
+                            
+                            <li>
+                                <b class="nomeHabilidade">Ataque de Finta</b>
+                                <p>Você pode gastar um dado de superioridade e usar uma ação bônus, no seu turno, para fintar, escolhendo uma criatura a 1,5 metro de você como alvo. Você tem vantagem na sua próxima jogada de ataque contra essa criatura, nesse turno. Se o ataque atingir, você adiciona seu dado de superioridade ao dano do ataque.</p><br>
+                            </li>
+                            
+                            <li>
+                                <b class="nomeHabilidade">Ataque de Manobra</b>
+                                <p>Quando você atingir uma criatura com um ataque com arma, você pode gastar um dado de superioridade para tentar manobrar um de seus companheiros para uma posição mais vantajosa. Você adiciona seu dado de superioridade a jogada de dano do ataque e escolhe uma criatura amigável que possa ver ou ouvir você. Aquela criatura pode usar sua reação para se mover até metade do seu deslocamento, sem provocar ataques de oportunidade do alvo do seu ataque.</p><br>
+                            </li>
+                            
+                            <li>
+                                <b class="nomeHabilidade">Ataque de Precisão</b>
+                                <p>Quando você realizar uma jogada de ataque com arma contra uma criatura, você pode gastar um dado de superioridade para adicioná-lo a jogada. Você pode usar essa manobra antes ou depois de realizar a jogada de ataque, mas deve usá-la antes de qualquer efeito do ataque ser aplicado.</p><br>
+                            </li>
+                            
+                            <li>
+                                <b class="nomeHabilidade">Ataque Desarmante</b>
+                                <p>Quando você atingir uma criatura com um ataque com arma, você pode gastar um dado de superioridade para tentar desarmar o alvo, forçando-o a derrubar um item, à sua escolha, que ele esteja empunhando. Você adiciona o dado de superioridade a jogada de dano do ataque e o alvo deve realizar um teste de resistência de Força. Se fracassar, ele derrubará o objeto escolhido. O objeto cai aos pés dele.</p><br>
+                            </li>
+                            
+                            <li>
+                                <b class="nomeHabilidade">Ataque Estendido</b>
+                                <p>Quando você atingir uma criatura com um ataque corpo-a-corpo com arma, você pode gastar um dado de superioridade para aumentar o alcance do seu ataque em 1,5 metro. Se você atingir, você adiciona o seu dado de superioridade ao dano causado pelo ataque.</p><br>
+                            </li>
+                            
+                            <li>
+                                <b class="nomeHabilidade">Ataque Provocante</b>
+                                <p>. Quando você atingir uma criatura com um ataque com arma, você pode gastar um dado de superioridade para tentar incitar a alvo a atacar você. Você adiciona seu dado de superioridade a jogada de dano do ataque e o alvo deve realizar um teste de resistência de Sabedoria. Se falhar, o alvo terá desvantagem em todas as jogadas de ataque contra alvos diferentes de você, até o fim do seu próximo turno</p><br>
+                            </li>
+                            
+                            <li>
+                                <b class="nomeHabilidade">Ataque Trespassante</b>
+                                <p>Quando você atingir uma criatura com um ataque corpo-a-corpo com arma, você pode gastar um dado de superioridade para tentar causar dano a outra criatura com o mesmo ataque. Escolha uma criatura a 1,5 metro do alvo original e que esteja no seu alcance. Se a jogada de ataque original atingiria a segunda criatura, ela sofre dano igual ao número rolado no dado de superioridade. O dano é do mesmo tipo que o causado pelo ataque original.</p><br>
+                            </li>
+                            
+                            <li>
+                                <b class="nomeHabilidade">Contra-Atacar</b>
+                                <p>Quando uma criatura atacar você com um ataque corpo-a-corpo e errar, você pode usar sua reação e gastar um dado de superioridade para realizar um ataque corpo-a-corpo com arma contra essa criatura. Se você atingir, você adiciona seu dado de superioridade a jogada de dano do ataque. </p><br>
+                            </li>
+                            
+                            <li>
+                                <b class="nomeHabilidade">Derrubar</b>
+                                <p>Quando você atingir uma criatura com um ataque com arma, você pode gastar um dado de superioridade para tentar derrubar o alvo no chão. Você adiciona seu dado de superioridade a jogada de dano do ataque e, se o alvo for Grande ou menor, ele deve realizar um teste de resistência de Força. Se falhar, o alvo ficará caído no chão.</p><br>
+                            </li>
+                            
+                            <li>
+                                <b class="nomeHabilidade">Golpe Distrativo</b>
+                                <p>. Quando você atingir uma criatura com um ataque com arma, você pode gastar um dado de superioridade para tentar distrair a criatura, abrindo uma brecha para um de seus aliados. Você adiciona seu dado de superioridade a jogada de dano do ataque. A próxima jogada de ataque realizada contra o alvo por uma criatura diferente de você, tem vantagem, se o ataque for realizado antes do começo do seu próximo turno.</p><br>
+                            </li>
+                            
+                            <li>
+                                <b class="nomeHabilidade">Golpe do Comandante</b>
+                                <p>Quando você realiza a ação de Ataque, no seu turno, você pode desistir de um dos seus ataques e usar uma ação bônus para direcionar o ataque de um dos seus companheiros. Quando você faz isso, escolha uma criatura amigável que possa ver ou ouvir você e gaste um dado de superioridade. Essa criatura pode, imediatamente, usar sua reação para realizar um ataque com arma, adicionando seu dado de superioridade a jogada de dano do ataque.</p><br>
+                            </li>
+                            
+                            <li>
+                                <b class="nomeHabilidade">Inspirar</b>
+                                <p>No seu turno, você pode usar uma ação bônus e gastar um dado de superioridade para reforçar a determinação dos seus companheiros. Quando o fizer, escolha uma criatura amigável que possa ver ou ouvir você. Essa criatura ganha uma quantidade de pontos de vida temporários igual a sua rolagem de dado de superioridade + seu modificador de Carisma.</p><br>
+                            </li>
+                            
+                            <li>
+                                <b class="nomeHabilidade">Passo Evasivo</b>
+                                <p>Quando você se mover, você pode gastar um dado de superioridade, role o dado e adicione o número rolado a sua CA até você terminar seu deslocamento.</p><br>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="popup" class="popup-overlay2">
+            <div class="popup-content2">
+                <iframe id="popup-iframe" src="" frameborder="0"></iframe>
+            </div>
+        </div>        
         
         <script>
             function toggleAccordion(element) {
                 const content = element.nextElementSibling;
-                content.style.display = content.style.display === "block" ? "none" : "block"; // Alterna entre abrir e fechar
+                content.style.display = content.style.display === "none" ? "block" : "none"; // Alterna entre abrir e fechar
             }
         </script>
     </body>

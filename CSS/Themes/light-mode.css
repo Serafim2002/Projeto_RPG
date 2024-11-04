@@ -69,6 +69,22 @@ main {
     position: relative;
 }
 
+.popup-overlay2 {
+    display: none;
+    position: absolute;
+    border: 1px solid #f8f8f8;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fdfdfd;
+    z-index: 1000;
+    padding: 5px;
+}
+
+.popup-content2 iframe {
+    width: 365px; /* Ajuste o tamanho conforme necessário */
+    height: 327px;
+}
+
 /* Seções */
 h2, h3 {
     color: #9b59b6;
