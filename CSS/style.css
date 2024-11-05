@@ -145,7 +145,14 @@ header, footer {
     z-index: 1000; /* Certifique-se de que o botão fique acima de outros elementos */
 }
 
-.theme-toggle button {
+.home-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.theme-toggle button, .home-btn button {
     background: transparent; /* Fundo transparente para o botão */
     border: none; /* Remove bordas padrão */
     font-size: 1.5rem; /* Tamanho do ícone */
@@ -154,7 +161,7 @@ header, footer {
     transition: transform 0.2s; /* Efeito de transição suave ao passar o mouse */
 }
 
-.theme-toggle button:hover {
+.theme-toggle button:hover, .home-btn button:hover {
     transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
 }
 

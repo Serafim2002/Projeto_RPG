@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O/A nomeClasse - D&D 5e</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/Themes/light-mode.css" id="light-mode">
+    <link rel="stylesheet" href="../CSS/Themes/dark-mode.css" id="dark-mode">
+    <script src="../JavaScript/script.js" defer></script>
+</head>
+<body>
+    <!-- Cabeçalho da Página -->
+    <header>
+        <!-- Nome da Classe -->
+        <h1>O/A nomeClasse</h1>
+        
+        <!-- Botões p trocar o tema da página entre claro e/ou escuro -->
+        <div class="theme-toggle">
+            <button id="light-mode-btn" title="Modo Claro">
+                ☀️ <!-- ícone de sol -->
+            </button>
+            <button id="dark-mode-btn" title="Modo Escuro" style="display: none;">
+                🌙 <!-- ícone de lua -->
+            </button>
+        </div>
+        
+        <!-- Botão p voltar ao topo -->
+        <div class="home-btn">
+            <button id="home-btn" title="Voltar ao Topo" onclick="scrollToTop()">🔝</button>
+        </div>
+    </header>
+    
+    <!-- Barra de Navegação -->
+    <div class="nav-buttons" id="navbar-btn">
+        <a href="#visao">Visão Geral</a>
+        <a href="#build">Construção</a>
+        <a href="#features">Características</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#archetypes">Arquétipos</a>
+    </div>
+    
+    <!-- Corpo da Página -->
+    <div class="container">
+        <!-- Visão Geral -->
+        <div class="card">
+            <div class="accordion-title" onclick="toggleAccordion(this)" id="visao"><h3>Visão Geral</h3></div>
+            <div class="accordion-content">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;visãoGeral1.</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;visãoGeral2.</p>
+            </div>
+        </div>
+        
+        <!-- Construindo um(a) Classe -->
+        <div class="card">
+            <div class="accordion-title" onclick="toggleAccordion(this)" id="build"><h3>Construindo um Guerreiro</h3></div>
+            <div class="accordion-content">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;descrição1</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;descrição2</p>
+                
+                <!-- Construção Rápida do(a) Classe -->
+                <div class="accordion-title" onclick="toggleAccordion(this)"><h4>Construção Rápida</h4></div>
+                <div class="accordion-content">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;descrição.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Características de Classe -->
+        <div class="card">
+            <div class="accordion-title" onclick="toggleAccordion(this)" id="features"><h3>Características de Classe</h3></div>
+            <div class="accordion-content">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Como um CLASSE, você adquire as seguintes características de classe.</p>
+                
+                <!-- Pontos de Vida -->
+                <div class="accordion-title" onclick="toggleAccordion(this)"><h4>Pontos de Vida</h4></div>
+                <div class="accordion-content">
+                    <ul>
+                        <li><b>Dado de Vida: </b>1dx por nível de CLASSE.</li><br>
+                        <li><b>Pontos de Vida no 1º Nível: </b>X + seu modificador de Constituição.</li><br>
+                        <li><b>Pontos de Vida nos Níveis Seguintes: </b>1dx (ou Y) + seu modificador de Constituição por nível de CLASSE após o 1º.</li><br>
+                    </ul>
+                </div>
+                
+                <!-- Proficiências -->
+                <div class="accordion-title" onclick="toggleAccordion(this)"><h4>Proficiências</h4></div>
+                <div class="accordion-content">
+                    <ul>
+                        <li><b>Armaduras: </b>ARMADURAS</li><br>
+                        <li><b>Armas: </b>ARMAS</li><br>
+                        <li><b>Ferramentas: </b>FERRAMENTAS</li><br><br>
+                        <li><b>Testes de Resistência: </b>ATRIBUTOS</li><br>
+                        <li><b>Perícias: </b>Escolha duas dentre nomePericias.</li><br>
+                    </ul>
+                </div>
+                
+                <!-- Equipamentos -->
+                <div class="accordion-title" onclick="toggleAccordion(this)"><h4>Equipamento</h4></div>
+                <div class="accordion-content">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Você começa com o seguinte equipamento, além do equipamento concedido pelo seu antecedente:</p><br>
+                    <ul>
+                        <li>(a) OPÇÃO1 ou (b) OPÇÃO2</li><br>
+                        <li>(a) OPÇÃO1 ou (b) OPÇÃO2</li><br>
+                        <li>(a) OPÇÃO1 ou (b) OPÇÃO2</li><br>
+                        <li>(a) Um pacote de NOMEPACOTE1 ou (b) Um pacote de NOMEPACOTE2</li><br>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Habilidades de Classe -->
+        <div class="card">
+            <div class="accordion-title" onclick="toggleAccordion(this)" id="skills"><h3>Habilidades de Classe</h3></div>
+            <div class="accordion-content">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Ao adquirir niveis nessa classe, você ganha as seguintes habilidades:</p>
+                
+                <!-- nomeHabilidade (Xº Nível) -->
+                <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h4>nomeHabilidade</h4></div>
+                <div class="accordion-content">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;descrição1</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;descrição2</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Subclasses -->
+        <div class="card">
+            <div class="accordion-title" onclick="toggleAccordion(this)" id="archetypes"><h3>Opções de Subclasse</h3></div>
+            <div class="accordion-content">
+
+                <!-- Nome Subclasse -->
+                <div class="accordion-title" onclick="toggleAccordion(this)" id="archetypes"><h4>NOMESUBCLASSE</h4></div>
+                <div class="accordion-content">
+                    <p>descrição</p>
+                    
+                    <!-- nomeHabilidade (Xº Nível) -->
+                    <div class="accordion-title nomeHabilidade" onclick="toggleAccordion(this)"><h5>nomeHabilidade</h5></div>
+                    <div class="accordion-content">
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;descrição1</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;descrição2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Janela Pop-up -->
+        <div class="popup-overlay2" id="popup">
+            <div class="popup-content2">
+                <iframe id="popup-iframe" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé da Página -->
+    <footer>
+        <p>&copy; 2024 Project RPG - Dead Tree Scribes. Criado por Soledar. Todos os direitos reservados às suas respectivas empresas.</p>
+    </footer>
+</body>
+</html>
