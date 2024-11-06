@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project RPG - Dead Tree Scribes</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/Themes/light-mode.css" id="light-mode">
+    <link rel="stylesheet" href="./CSS/Themes/dark-mode.css" id="dark-mode">
+    <script src="./JavaScript/theme.js"></script>
+    <style>
+        .hidden {
+            display: none; /* Oculta os elementos */
+        }
+
+        h2 {
+            cursor: pointer; /* Indica que o título é clicável */
+            color: #9b59b6; /* Cor dos títulos */
+        }
+
+        h2:hover {
+            text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dead Tree Scribes</h1>
+        <h2 id="cabecalho">TTRPG Project</h2>
+        <p>Seu portal de introdução ao mundo dos RPGs de mesa</p>
+        <div class="theme-toggle">
+            <button id="light-mode-btn" title="Modo Claro">☀️</button>
+            <button id="dark-mode-btn" title="Modo Escuro" style="display: none;">🌙</button>
+        </div>        
+    </header>
+
+    <nav class="nav-buttons">
+        <a href="index.html">Home</a>
+        <a href="livros.html">Livros</a>
+        <a href="regras.html">Regras</a>
+        <a href="classes.html">Classes</a>
+        <a href="magias.html">Magias</a>
+    </nav>
+    
+    <main>
+        <section class="regras-magias">
+            <!-- Título com funcionalidade de clique -->
+            <h2 class="toggle" data-target="conteudo-regras">Regras de Magias - D&D 5ª Edição</h2>
+            <p id="conteudo-regras" class="hidden">As magias em D&D 5ª edição são fundamentais para muitos personagens, oferecendo uma variedade de efeitos que podem mudar o curso de uma aventura. Aqui estão algumas regras essenciais:</p>
+
+            <h2 class="toggle" data-target="conteudo-tipos">Tipos de Magias</h2>
+            <p id="conteudo-tipos" class="hidden">As magias são divididas em diferentes categorias:</p>
+            <ul id="lista-tipos" class="hidden">
+                <li><strong>Magias de Ataque:</strong> Causam dano ou efeitos negativos aos inimigos.</li>
+                <li><strong>Magias de Suporte:</strong> Ajudam aliados com curas ou buffs.</li>
+                <li><strong>Magias de Controle:</strong> Alteram o campo de batalha, dificultando o movimento do inimigo.</li>
+            </ul>
+
+            <h2 class="toggle" data-target="conteudo-componentes">Componentes de Magia</h2>
+            <p id="conteudo-componentes" class="hidden">Para lançar uma magia, o conjurador pode precisar de componentes:</p>
+            <ul id="lista-componentes" class="hidden">
+                <li><strong>V (Verbal):</strong> Requer que o conjurador fale palavras mágicas.</li>
+                <li><strong>S (Somático):</strong> Requer gestos específicos com as mãos.</li>
+                <li><strong>M (Material):</strong> Requer um componente físico, que pode ser consumido.</li>
+            </ul>
+
+            <h2 class="toggle" data-target="conteudo-escolha">Escolha e Lançamento de Magias</h2>
+            <p id="conteudo-escolha" class="hidden">Os conjuradores têm uma lista de magias que podem escolher e lançar. As regras gerais incluem:</p>
+            <ul id="lista-escolha" class="hidden">
+                <li>Magias devem ser escolhidas durante um descanso longo.</li>
+                <li>O nível da magia deve ser igual ou inferior ao nível de magia que o personagem pode lançar.</li>
+                <li>Magias de ritual podem ser lançadas sem gastar um espaço de magia, mas requerem mais tempo.</li>
+            </ul>
+        </section>
+
+        <section id="Lista">
+            <h2>Listas de magias</h2>
+            <p>Lista de cada classe:</p>
+            <ul>
+                <a href="" target="_blank">Magias</a>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Project RPG - Dead Tree Scribes. Criado por Serafim. Todos os direitos reservados às suas respectivas empresas.</p>
+    </footer>
+
+    <script>
+        // Seleciona todos os títulos com a classe 'toggle'
+        const toggles = document.querySelectorAll(".toggle");
+
+        // Adiciona um evento de clique a cada título
+        toggles.forEach(toggle => {
+            toggle.addEventListener("click", () => {
+                // Pega o ID do conteúdo associado ao título (usando o data-target)
+                const targetId = toggle.getAttribute("data-target");
+                const content = document.getElementById(targetId);
+
+                // Alterna a classe 'hidden' no conteúdo
+                content.classList.toggle("hidden");
+                
+                // Se o conteúdo for uma lista (<ul>), alterna a classe 'hidden' na lista também
+                const relatedList = document.getElementById('lista-' + targetId.split('-')[1]);
+                if (relatedList) {
+                    relatedList.classList.toggle("hidden");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

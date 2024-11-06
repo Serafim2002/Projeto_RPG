@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="./CSS/popUp.css">
     <link rel="stylesheet" href="./CSS/Themes/light-mode.css" id="light-mode">
     <link rel="stylesheet" href="./CSS/Themes/dark-mode.css" id="dark-mode">
-    <script src="./JavaScript/script.js" defer></script>
-</head>
+    <script src="./JavaScript/theme.js"></script>
+    <script src="./JavaScript/scroll.js"></script>
+    <script src="./JavaScript/popup.js"></script>
+    <script src="./JavaScript/accordion.js"></script>
 <body>
     <header>
         <h1>Dead Tree Scribes</h1>
@@ -25,12 +27,13 @@
         </div>
     </header>
     
-    <div class="nav-buttons">
+    <nav class="nav-buttons">
         <a href="index.html">Home</a>
         <a href="livros.html">Livros</a>
         <a href="regras.html">Regras</a>
         <a href="classes.html">Classes</a>
-    </div>
+        <a href="magias.html">Magias</a>
+    </nav>
     
     <main>
         <section class="introduction">
@@ -48,7 +51,7 @@
                     <span class="icon">⚙️</span>
                     <p>Artífice</p>
                 </div>
-                <div class="grid-item" onclick="openPopup('barbarian')">
+                <div class="grid-item" onclick="openPopup('barbarian.html')">
                     <span class="icon">🪓</span>
                     <p>Bárbaro</p>
                 </div>
