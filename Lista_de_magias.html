@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dead Tree Scribes - RPG Project</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/Themes/light-mode.css" id="light-mode">
+    <link rel="stylesheet" href="./CSS/Themes/dark-mode.css" id="dark-mode">
+    <script src="./JavaScript/theme.js"></script>
+    <script src="./JavaScript/magias.js"></script>
+    <script>
+        async function carregarMagias() {
+            try {
+                const response = await fetch('../PHP/buscar_magias.php');
+                const magias = await response.json();
+
+                const lista = document.getElementById('lista-magias');
+                lista.innerHTML = '';
+
+                magias.forEach(magia => {
+                    const item = document.createElement('li');
+                    item.innerHTML = `
+                        <strong>Nome:</strong> ${magia.nome}<br>
+                        <strong>Tipo:</strong> ${magia.tipo}<br>
+                        <strong>Nível:</strong> ${magia.nivel}<br>
+                        <strong>Componentes:</strong> ${magia.componentes}<br>
+                        <strong>Descrição:</strong> ${magia.descricao}<br>
+                    `;
+                    lista.appendChild(item);
+                });
+            } catch (error) {
+                console.error('Erro ao carregar magias:', error);
+            }
+        }
+
+        async function inserirMagia(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const response = await fetch('../PHP/inserir_magia.php', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                alert('Magia inserida com sucesso!');
+                carregarMagias(); // Recarrega a lista para mostrar a nova magia
+                event.target.reset(); // Limpa o formulário
+            } else {
+                alert('Erro ao inserir a magia.');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', carregarMagias);
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Dead Tree Scribes</h1>
+        <h2 id="cabecalho">TTRPG Project</h2>
+        <p>Seu portal de introdução ao mundo dos RPGs de mesa</p>
+        <div class="theme-toggle">
+            <button id="light-mode-btn" title="Modo Claro">
+                ☀️ <!-- ícone de sol -->
+            </button>
+            <button id="dark-mode-btn" title="Modo Escuro" style="display: none;">
+                🌙 <!-- ícone de lua -->
+            </button>
+        </div>        
+    </header>
+
+    <nav class="nav-buttons">
+        <a href="index.html">Home</a>
+        <a href="livros.html">Livros</a>
+        <a href="regras.html">Regras</a>
+        <a href="classes.html">Classes</a>
+        <a href="magias.html">Magias</a>
+    </nav>
+    
+    <header>
+        <h1>Listas de Magias</h1>
+        <p>Lista de cada classe:</p>
+    </header>
+    
+    <section id="Lista">
+        <ul id="lista-magias">
+            <!-- Magias carregadas via JavaScript -->
+        </ul>
+    </section>
+
+    <section id="inserir-magias">
+        <h2>Inserir Nova Magia</h2>
+        <form onsubmit="inserirMagia(event)">
+            <label for="nome">Nome da Magia:</label>
+            <input type="text" id="nome" name="nome" required><br>
+
+            <label for="tipo">Tipo de Magia:</label>
+            <input type="text" id="tipo" name="tipo" required><br>
+
+            <label for="nivel">Nível da Magia:</label>
+            <input type="number" id="nivel" name="nivel" required><br>
+
+            <label for="componentes">Componentes:</label>
+            <input type="text" id="componentes" name="componentes" required><br>
+
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" required></textarea><br>
+
+            <button type="submit">Inserir Magia</button>
+        </form>
+    </section>
+</body>
+</html>
